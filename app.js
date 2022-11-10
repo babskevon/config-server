@@ -23,7 +23,10 @@ app.use(cors());
 
 
 require("./app/routes/config-server.routes.js")(app);
+app.get('/', (req, res) => {
+  res.send('Config-server running!');
+});
 
-app.listen(port,'0.0.0.0', () => {
+app.listen(port, () => {
   console.log(`Example app listening at http://0.0.0.0:${port}`);
 });
