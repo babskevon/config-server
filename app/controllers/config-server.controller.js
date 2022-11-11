@@ -14,9 +14,10 @@ exports.GetClientKeys = async (req, res) => {
                 "private_key": _private_key.PRIVATE_KEY
             }
         });
+    }else{
+        res.send({
+            "success":false,
+            "message":"record not found"
+        });
     }
-    res.send({
-        "success":false,
-        "message":"record not found"
-    });
 };

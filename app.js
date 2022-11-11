@@ -27,6 +27,6 @@ app.get('/', (req, res) => {
   res.send('Config-server running!');
 });
 
-app.listen(port, () => {
+app.listen(port,'0.0.0.0', () => {
   console.log(`Example app listening at http://0.0.0.0:${port}`);
 });
