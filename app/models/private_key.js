@@ -16,6 +16,10 @@ class PRIVATE_KEY extends Model {
             DEVICE_NUMBER: data.device_no
         });
     }
+    
+    static getAllKeys=async()=>{
+        return await PRIVATE_KEY.query();
+    }
 }
 
 
